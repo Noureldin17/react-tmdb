@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: oleoScript;
+    /*src: url("./assets/OleoScript-Bold.ttf");*/
+    src: url("./assets/Agbalumo-Regular.ttf");
+}
+
+@layer components {
+    .nav-small {
+        position: relative;
+        color: theme('colors.linkPrimary');
+    }
+
+    .nav-small::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 80%;
+        top: 10%;
+        width: 0.3rem;
+        background-color: white; 
+        transform: scale(0, 1); 
+        transition: transform 0.3s ease-in-out;
+        border-radius: 12px;
+    }
+
+    .nav-small.active {
+        color: white;
+    }
+
+    .nav-small.active::before {
+        transform: scale(1, 1);
+    }
+
+    .nav-small:hover::before {
+        transform: scale(1, 1);
+    }
+
+    .nav-small:focus::before {
+        transform: scale(1, 1);
+    }
+}
+
+
+@layer components {
+    .nav-link {
+        position: relative;
+        color: theme('colors.linkPrimary');
+    }
+
+    .nav-link::after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 3px;
+        left: 10%;
+        width: 80%;
+        bottom: -14px;
+        background-color: white;
+        transform: scale(0, 1);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 12px;
+    }
+
+    .nav-link.active {
+        color: white;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus::after,
+    .nav-link.active::after {
+        transform: scale(1, 1);
+    }
+
+    .nav-gradient {
+        background: linear-gradient(to bottom, #080e12FF, #080e12F2, #080e12E5, #080e12D8, #080e12CB, #080e12BE, #080e12B1, #080e12A4, #080e1297, #080e128A);
+    }
+
+    @media (min-width: 768px) {
+        .nav-link::after {
+            left: 10%;
+            width: 80%;
+        }
+    }
+}
+
+.customFont {
+    font-family: oleoScript, serif;
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #080e12;
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 2px;
+    height: 4px;
+}
+
+
+
