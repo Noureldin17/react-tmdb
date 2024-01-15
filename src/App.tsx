@@ -1,5 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import TvShows from "./pages/TvShows";
+import People from "./pages/People";
+import Login from "./pages/Login";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { MantineProvider } from "@mantine/core";
 
@@ -10,11 +15,11 @@ function App() {
     {
       element: <AppLayout />,
       children: [
-        { path: "/", element: <div></div> },
-        { path: "/movies", element: <div></div> },
-        { path: "/tvshows", element: <div></div> },
-        { path: "/people", element: <div></div> },
-        { path: "/login", element: <div></div> },
+        { path: "/", element: <Home/> },
+        { path: "/movies", element: <Movies/> },
+        { path: "/tvshows", element: <TvShows/> },
+        { path: "/people", element: <People/> },
+        { path: "/login", element: <Login/>},
       ],
     },
   ]);
