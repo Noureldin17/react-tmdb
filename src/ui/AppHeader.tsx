@@ -10,12 +10,12 @@ function AppHeader() {
     <div
       // ref={ref}
       className={
-        'z-10 md:nav-gradient select-none fixed flex flex-col justify-between bg-primaryDark md:relative md:border-b-2 md:border-b-secondaryDark'
+        'z-10 md:nav-gradient select-none fixed flex flex-col justify-between bg-primaryDark  md:border-b-2 md:border-b-secondaryDark'
       }
     >
       <header
         className={
-          'flex w-screen transform items-center justify-between p-3 tracking-[2px] transition-transform duration-300 ease-linear'
+          'flex w-screen transform items-center justify-between p-3 tracking-[2px] transition-transform duration-300 ease-linear bg-primaryDark'
         }
       >
         <Logo />

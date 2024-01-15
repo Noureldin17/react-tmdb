@@ -14,8 +14,10 @@ export default {
       },
       colors: {
         primaryDark: '#080e12FF',
+        primaryDarkTransparency: '#080e12AA',
         secondaryDark: '#131821FF',
         primaryRed: '#5f1916FF',
+        darkerRed: '#4b1312FF',
         linkPrimary: '#e6f0ffFF',
         redButtonHover: '#68191dFF',
         primaryBlue: '#369BFF',

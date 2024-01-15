@@ -2,9 +2,11 @@ import MovieBackdrop from "./MovieBackdrop";
 import MoviesCarousel from "./MoviesCarousel";
 import { useEffect, useState } from "react";
 import { useMovies } from "../hooks/useMovies";
+import Loader from "../../../ui/Loader";
 
 function DiscoverMovies() {
   const [currentBackdrop, setCurrentBackdrop] = useState("");
+  const [activeMovie, setActiveMovie] = useState(0);
 
   const moviesQuery = useMovies();
 
@@ -18,13 +20,17 @@ function DiscoverMovies() {
     return <div></div>;
   }
   if (moviesQuery.isLoading) {
-    return <div></div>;
+    return <Loader />;
   }
 
   return (
-    <MovieBackdrop backdropImage={currentBackdrop}>
+    <MovieBackdrop
+      activeMovie={moviesQuery.data![activeMovie]}
+      backdropImage={currentBackdrop}
+    >
       <MoviesCarousel
         movies={moviesQuery.data!}
+        setActiveMovie={(index) => setActiveMovie(index)}
         setBackdrop={(image: string) => setCurrentBackdrop(image)}
       ></MoviesCarousel>
     </MovieBackdrop>
