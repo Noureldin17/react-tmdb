@@ -29,6 +29,7 @@ function DiscoverMovies() {
       backdropImage={currentBackdrop}
     >
       <MoviesCarousel
+        activeMovie={activeMovie}
         movies={moviesQuery.data!}
         setActiveMovie={(index) => setActiveMovie(index)}
         setBackdrop={(image: string) => setCurrentBackdrop(image)}

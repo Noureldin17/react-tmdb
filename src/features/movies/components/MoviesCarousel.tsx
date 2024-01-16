@@ -5,6 +5,7 @@ import { ArrowLeftRounded, ArrowRightRounded } from "@mui/icons-material";
 import { useClickOutside } from '@mantine/hooks';
 type CarouselProps = {
   movies: Movie[];
+  activeMovie: number;
   setBackdrop: (image: string) => void;
   setActiveMovie: (index: number) => void;
 };
@@ -64,9 +65,7 @@ function MoviesCarousel(props: CarouselProps) {
             onClick={() => handleImageClick(index)}
             onMouseOver={() => props.setBackdrop(movies[index].backdrop_path)}
             onMouseLeave={() => {
-              if (selectedImage != -1) {
-                props.setBackdrop(movies[selectedImage].backdrop_path);
-              }
+              props.setBackdrop(props.movies[props.activeMovie].backdrop_path);
             }}
           />
         ))}

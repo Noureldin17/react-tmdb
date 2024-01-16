@@ -10,7 +10,7 @@ function AppHeader() {
     <div
       // ref={ref}
       className={
-        'z-10 md:nav-gradient select-none fixed flex flex-col justify-between bg-primaryDark  md:border-b-2 md:border-b-secondaryDark'
+        'z-10 md:nav-gradient top-0 select-none fixed flex flex-col justify-between bg-primaryDark  md:border-b-2 md:border-b-secondaryDark'
       }
     >
       <header

@@ -22,7 +22,7 @@ function MovieBackdrop(props: MovieBackropProps) {
   const [trailer, setTrailer] = useState("");
 
   return (
-    <div className="absolute w-full h-[32rem] select-none mt-[3.6rem]">
+    <div className="relative w-full h-[32rem] select-none mt-[3.6rem]">
       <div
         style={{
           background:
