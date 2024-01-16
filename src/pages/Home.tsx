@@ -1,6 +1,10 @@
+import DiscoverMovies from "../features/movies/components/DiscoverMovies";
 
 function Home() {
-  return <>
-  </>;
+  return (
+    <>
+      <DiscoverMovies />
+    </>
+  );
 }
 export default Home;

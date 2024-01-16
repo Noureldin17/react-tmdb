@@ -92,10 +92,10 @@ function MovieBackdrop(props: MovieBackropProps) {
             >
               <div
                 className={
-                  "text-white flex-col flex items-end mt-8 p-2 rounded-[12px] w-full bg-primaryDark"
+                  "text-white flex-col flex items-end mt-8 p-2 rounded-[18px] w-full bg-black"
                 }
               >
-                <CloseRounded onClick={() => setTrailerVisible(false)} />
+                <CloseRounded className={'text-gray-300 hover:text-white rounded-full p-0.4 hover:bg-gray-900'} onClick={() => setTrailerVisible(false)} />
                 <YouTubePlayer
                   playing
                   controls

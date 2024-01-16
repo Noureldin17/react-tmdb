@@ -8,10 +8,10 @@ interface BackdropButtonProps {
 function BackdropButton(props : BackdropButtonProps) {
   return (
     <div className={'mt-3'}>
-      <button onClick={props.onPlayTrailer} className={"text-white bg-darkerRed px-3 py-2"}>
+      <button onClick={props.onPlayTrailer} className={"text-white bg-darkerRed px-3 py-2 outline-none "}>
         <PlayArrow ></PlayArrow>
       </button>
-      <button className={"text-white bg-redButtonHover px-3 py-2"}>
+      <button className={"text-white bg-redButtonHover px-3 py-2 outline-none "}>
         <Bookmark></Bookmark>
       </button>
     </div>
