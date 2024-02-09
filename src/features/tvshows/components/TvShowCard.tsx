@@ -3,7 +3,7 @@ import { IMAGE_BASE_URL_W500 } from "../../../config/ApiConstants";
 import { TvShow } from "../entities/TvShow";
 import { Rating } from "@mui/material";
 import { useState } from "react";
-function TvShowCard(props: { tvshow: TvShow }) {
+function TvShowCard(props: { tvshow: TvShow, onClickPlay: () => void }) {
   const date = new Date(props.tvshow.first_air_date);
   const year = date.getFullYear();
   const [playButtonVisible, setPlayButtonVisible] = useState(false);
@@ -23,6 +23,7 @@ function TvShowCard(props: { tvshow: TvShow }) {
           }
         >
           <div
+            onClick={props.onClickPlay}
             onMouseLeave={() => setLabelVisible(false)}
             onMouseEnter={() => setLabelVisible(true)}
             className={
@@ -31,7 +32,13 @@ function TvShowCard(props: { tvshow: TvShow }) {
           >
             <PlayArrowRounded fontSize="inherit" />
           </div>
-          <p className={`${labelVisible ? 'text-gray-200' : 'text-transparent'} text-xs font-medium transform transition-all duration-300 tracking-wider`}>Play Trailer</p>
+          <p
+            className={`${
+              labelVisible ? "text-gray-200" : "text-transparent"
+            } text-xs font-medium transform transition-all duration-300 tracking-wider`}
+          >
+            Play Trailer
+          </p>
         </div>
       )}
 
@@ -54,7 +61,7 @@ function TvShowCard(props: { tvshow: TvShow }) {
 
       <img
         className={"absolute w-[22rem] h-[12rem] rounded-xl"}
-        src={IMAGE_BASE_URL_W500 + props.tvshow.backdrop_path}
+        src=  {props.tvshow.backdrop_path != null ? `${IMAGE_BASE_URL_W500 + props.tvshow.backdrop_path}` : "src/assets/tmdb.png"}        
       />
     </div>
   );
