@@ -6,9 +6,9 @@ import {
 import { Movie } from "../entities/Movie";
 import { Trailer } from '../entities/Trailer';
 
-export async function fetchMovies({ pageParam = 1 }): Promise<Movie[]> {
+export async function fetchMovies({ pageParam = 1, targetEndpoint = DISCOVER_MOVIES_ENDPOINT }): Promise<Movie[]> {
   const response = await fetch(
-    `${BASE_URL}${DISCOVER_MOVIES_ENDPOINT}api_key=${API_KEY}&page=${pageParam}`
+    `${BASE_URL}${targetEndpoint}api_key=${API_KEY}&page=${pageParam}`
   );
   if (!response.ok) {
     throw new Error("Failed to fetch movies");

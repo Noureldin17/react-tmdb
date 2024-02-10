@@ -1,12 +1,11 @@
 import DiscoverMovies from "../features/movies/components/DiscoverMovies";
+import MoviesTabView from '../features/movies/components/MoviesTabView';
 
 function Home() {
   return (
     <>
       <DiscoverMovies />
-      <div className="absolute h-[12rem] w-full bg-secondaryDark mt-16">
-
-      </div>
+      <MoviesTabView/>
     </>
   );
 }

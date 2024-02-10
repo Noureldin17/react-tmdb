@@ -85,27 +85,32 @@ function MovieBackdrop(props: MovieBackropProps) {
             </p>
           </div>
           {trailerVisible && (
-            <div
+        <div
+          className={
+            "fixed inset-0  mx-auto justify-center w-full flex items-center bg-primaryDarkTransparency rounded-[12px] z-30"
+          }
+        >
+          <div
+            className={
+              "text-white flex-col md:h-[85%] h-[17rem] flex w-full md:w-[70%] md:inset-0 items-end gap-4 p-2 rounded-[18px]  bg-black"
+            }
+          >
+            <CloseRounded
               className={
-                "md:relative flex items-center justify-center absolute w-full md:w-[50%] md:h-[18rem] h-[90vh] md:px-12 md:py-8 md:bg-transparent bg-primaryDarkTransparency"
+                "text-gray-300 hover:text-white rounded-full p-0.4 hover:bg-gray-900"
               }
-            >
-              <div
-                className={
-                  "text-white flex-col flex items-end mt-8 p-2 rounded-[18px] w-full bg-black"
-                }
-              >
-                <CloseRounded className={'text-gray-300 hover:text-white rounded-full p-0.4 hover:bg-gray-900'} onClick={() => setTrailerVisible(false)} />
-                <YouTubePlayer
-                  playing
-                  controls
-                  width={"100%"}
-                  height={"17rem"}
-                  url={`https://www.youtube.com/watch?v=${trailer}`}
-                />
-              </div>
-            </div>
-          )}
+              onClick={() => setTrailerVisible(false)}
+            />
+            <YouTubePlayer
+              playing
+              controls
+              width={"100%"}
+              height={"100%"}
+              url={`https://www.youtube.com/watch?v=${trailer}`}
+            />
+          </div>
+        </div>
+      )}
         </div>
         {props.children}
       </div>

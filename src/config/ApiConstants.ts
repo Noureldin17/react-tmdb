@@ -5,6 +5,7 @@ export const API_KEY = "ef16bfa151221280ed88c1b436c10876";
 export const DISCOVER_MOVIES_ENDPOINT = "discover/movie?";
 export const UPCOMING_MOVIES_ENDPOINT = "movie/upcoming?";
 export const TOPRATED_MOVIES_ENDPOINT = "movie/top_rated?";
+export const POPULAR_MOVIES_ENDPOINT = "movie/popular?";
 export const MOVIE_GENRES: { [key: number]: string } = {
   12: "Adventure",
   28: "Action",
