@@ -40,7 +40,7 @@ function MoviesCarousel(props: CarouselProps) {
         <div
         onClick={scrollLeft}
           className={
-            "text-white absolute  start-1 z-10 text-5xl bg-primaryDarkTransparency rounded-full transition-all transform duration-700"
+            "text-white absolute text-center flex items-center start-1 z-10 text-5xl bg-primaryDarkTransparency rounded-full transition-all transform duration-700"
           }
         >
           <ArrowLeftRounded fontSize="inherit" />
@@ -74,7 +74,7 @@ function MoviesCarousel(props: CarouselProps) {
         <div
         onClick={scrollRight}
           className={
-            "text-white absolute end-1 z-10 text-5xl bg-primaryDarkTransparency rounded-full transition-all transform duration-700"
+            "text-white text-center flex items-center absolute end-1 z-10 text-5xl bg-primaryDarkTransparency rounded-full transition-all transform duration-700"
           }
         >
           <ArrowRightRounded fontSize="inherit" />
